@@ -1,0 +1,9 @@
+<div class="container">
+  <%= simple_form_for @list do |f| %>
+    <%= f.input :name %>
+    <%= f.button :submit, "Incluir Pelicula", class: "btn btn-success mt-3"%>
+  <% end %>
+</div>
+<div class="text-center py-3"> 
+  <%=link_to 'volver a peliculas', movies_path, class: 'btn btn-primary'%>
+</div>
