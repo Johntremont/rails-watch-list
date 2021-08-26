@@ -1,12 +1,14 @@
-<div class="container">
+
+
+<div class="container py-4">
   <div class="card" style="width: 18rem;">
     <img class="card-img-top"
       src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.melomanodigital.com%2Fclasico-troya%2F&psig=AOvVaw1LgrI0QMXBtdUgC8Bq8JzT&ust=1630027156486000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCLCY8b_CzfICFQAAAAAdAAAAABAP"
       alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title"><%= @movie.title %></h5>
+      <h5 class="card-title"><%= @list.name %></h5>
       <p class="card-text"><%=  %></p>
-        <%= link_to 'Editar Pelicula', edit_movie_path(@movie) %> || <%= link_to 'Borrar Pelicula', movie_path(@movie), method: :delete %> 
+      <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
   </div>
 </div>

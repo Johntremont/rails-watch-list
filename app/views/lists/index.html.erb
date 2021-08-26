@@ -1,1 +1,20 @@
 <h1>Lists</h1>
+
+<div class="h1"> All Movies</div>
+<div class="container mt-4 d-flex justify-content-evenly">
+  <% @lists.each do |list| %>
+    <div class="card mb-3" style="width: 18rem;">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"> <strong>Titulo: </strong>
+          <%= link_to list.name, list_path(list) %>
+        </li>
+        <li class="list-group-item"> <strong>Nombre de la lista: </strong>
+          <%=list.name %>
+        </li>
+      </ul>
+    </div>
+  <% end %>
+</div>
+
+
+<%= link_to 'Agregar una Lista' , new_list_path%> || <%= link_to 'Home' , root_path %>

@@ -1,5 +1,5 @@
 class MoviesController < ApplicationController
-  before_action :set_movie, only: %i[show]
+  before_action :set_movie, only: %i[show edit update destroy]
 
   def index
     @movies = Movie.all
@@ -17,22 +17,28 @@ class MoviesController < ApplicationController
 
   def show; end
 
-  def edit
-    @movies = Movie.all
-  end
+  def edit; end
 
   def update
-    @movies = Movie.all
+    if @movie.update(set_params)
+      redirect_to movies_path(@movie)
+    else
+      render :edit
+    end
   end
 
   def destroy
-    @movies = Movie.all
+    if @movie.destroy
+      redirect_to movies_path
+    else
+      render :show
+    end
   end
 
   private
 
   def set_movie
-    Movie.find(params[:id])
+    @movie = Movie.find(params[:id])
   end
 
   def set_params
