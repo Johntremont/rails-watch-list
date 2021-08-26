@@ -1,0 +1,25 @@
+<div class="h1"> All Movies</div>
+<div class="container mt-4 d-flex justify-content-evenly">
+  <% @movies.each do |movie| %>
+    <div class="card mb-3" style="width: 18rem;">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"> <strong>Titulo: </strong>
+          <%= link_to movie.title, movie_path(movie) %>
+        </li>
+        <li class="list-group-item"> <strong>Avance: </strong>
+          <%=movie.overview %>
+        </li>
+        <li class="list-group-item"> <strong>Link de la portada: </strong>
+          <%=movie.poster_url %>
+        </li>
+        <li class="list-group-item"> <strong>Valoracion: </strong>
+          <%=movie.rating %>
+        </li>
+      </ul>
+    </div>
+    <% end %>
+</div>
+</div>
+
+
+<%= link_to 'Agregar una Peli' , new_movie_path%> || <%= link_to 'Crear una lista' , new_list_path %> || <%= link_to 'Home' , root_path %>

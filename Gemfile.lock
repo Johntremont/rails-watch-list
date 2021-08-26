@@ -58,6 +58,7 @@ GEM
       zeitwerk (~> 2.2, >= 2.2.2)
     autoprefixer-rails (10.2.5.0)
       execjs (< 2.8.0)
+    awesome_print (1.9.2)
     bindex (0.8.1)
     bootsnap (1.7.7)
       msgpack (~> 1.0)
@@ -204,6 +205,7 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails (= 10.2.5)
+  awesome_print
   bootsnap (>= 1.4.2)
   byebug
   font-awesome-sass (~> 5.12.0)

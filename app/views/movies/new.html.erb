@@ -1,0 +1,10 @@
+<div class="container">
+  <%= simple_form_for @movie do |f| %>
+    <%= f.input :title %>
+      <%= f.input :overview %>
+        <%= f.input :poster_url %>
+          <%= f.input :rating %>
+            <%= f.button :submit %>
+              <% end %>
+                <%= link_to 'Home' , root_path %>
+</div>
