@@ -1,0 +1,21 @@
+<div class="h1"> All Bookmarks</div>
+<div class="container mt-4 d-flex justify-content-evenly">
+  <% @bookmarks.each do |bookmark| %>
+    <div class="card mb-3" style="width: 18rem;">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"> <strong>Titulo: </strong>
+          <%= link_to bookmark.comment, bookmark_path(bookmark) %>
+        </li>
+        <li class="list-group-item"> <strong>Nombre de la Pelicula: </strong>
+          <%= bookmark.movie.title %>
+        </li>
+         <li class="list-group-item"> <strong>Nombre de la list: </strong>
+          <%= bookmark.list.name %>
+        </li>
+      </ul>
+    </div>
+  <% end %>
+</div>
+
+
+<%= link_to 'Agregar una Bookmark' , new_list_bookmark_path%> || <%= link_to 'Home' , root_path %>
